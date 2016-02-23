@@ -6,7 +6,8 @@ Rails.application.routes.draw do
    root 'import#index'
 
   # Example of regular route:
-     get 'import/import' => 'import#import'
+     get 'import' => 'import#import', as: :import
+     get 'import/status' => 'import#status', as: :import_status
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
