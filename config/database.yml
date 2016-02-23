@@ -13,11 +13,11 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  host: localhost
-  database: JImport
+  host:     <%= ENV['PG_HOST'] %>
+  database: <%= ENV['PG_DATA'] %>
   pool: 5
-  #username: cpaeltz
-  #password: mypass1
+  username: <%= ENV['PG_USER'] %>
+  password: <%= ENV['PG_PASS'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
